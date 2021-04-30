@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{%block head%}<title>Home Page</title> {%endblock%}
+
+{%block body%}
+<div class="container">
+    {%for i in value%}
+    <hello>{{i}}</hello>
+    {%endfor%}
+</div>
+{%endblock%}

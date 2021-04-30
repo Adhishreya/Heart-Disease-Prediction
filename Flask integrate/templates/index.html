@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{%block head%}<title>Disease Detection</title> {%endblock%}
+
+{%block body%}
+<div class="container">
+
+    <form action="{{ url_for('check')}}"method="POST">
+    <label>age</label>
+    <input type="number" name="age">
+    <br>
+    
+    <input type="radio" name="gender" value="0">
+    <label for="0">Female</label>
+    <br>
+    <input type="radio" name="gender" value="1">
+    <label for="1">Male</label>
+    <br>
+    <input type="radio" name="cp" value="1">
+    <label for="1">Typical Angina</label>
+    <br>
+    <input type="radio" name="cp" value="2">
+    <label for="2">Atypical Angina</label>
+    <br>
+    <input type="radio" name="cp" value="3">
+    <label for="3">Non-Angina pain</label>
+    <br>
+    <input type="radio" name="cp" value="4">
+    <label for="4">Asymptomatic</label>
+    <br>
+    <input type="number" name="trestbps">
+    <label>normal resting blood-pressure</label>
+
+    <br>
+    <input type="number" name="chol">
+    <label>Cholesterol</label>
+
+    <br>
+    <input type="radio" name="restecg" value="0">
+    <label for="0">Normal</label>
+    <br>
+    <input type="radio" name="restecg" value="1">
+    <label for="1">having ST-T wave abnormality</label>
+    <br>
+    <input type="radio" name="restecg" value="2">
+    <label for="2">ventricular hypertrophy</label>
+    <br>
+    <input type="number" name="thalach">
+    <label>Max heart rate achieved</label>
+    <br>
+    <label>Excercise induced angina</label>
+    <input type="radio" name="exang" value="1">
+    <label for="1">yes</label>
+    <br>
+    <input type="radio" name="exang" value="0">
+    <label for="0">no</label>
+    <br>
+
+    <input type="number" name="oldpeak">
+    <label> ST depression induced by exercise relative to rest</label>
+
+    <br>
+    <input type="radio" name="slope" value="1">
+    <label for="1">unsloping</label>  
+    <br>
+    <input type="radio" name="slope" value="2">
+    <label for="2">flat</label>  
+    <br>
+    <input type="radio" name="slope" value="3">
+    <label for="3">downsloping</label>  
+    <br>
+
+    <label >number of major vessels</label>
+    <input type="radio" name="ca" value="0">
+    <label for="0">0</label>  
+    <br>
+    <input type="radio" name="ca" value="1">
+    <label for="1">1</label>  
+    <br>
+    <input type="radio" name="ca" value="2">
+    <label for="2">2</label>  
+    <br>
+    <input type="radio" name="ca" value="3">
+    <label for="3">3</label>  
+    <br>
+
+
+    <input type="radio" name="thal" value="1">
+    <label for="1">normal</label>  
+    <br>
+    <input type="radio" name="thal" value="2">
+    <label for="2">fixed defect</label>  
+    <br>
+    <input type="radio" name="thal" value="3">
+    <label for="3">reversible defect</label>  
+    <br>
+
+
+
+    <label >fasting blood sugar > 120 mg/dl</label>
+    <input type="radio" name="fbs" value="0">
+    <label for="0">yes</label>  
+    <br>
+    <input type="radio" name="fbs" value="1">
+    <label for="1">no</label>  
+    <br>
+
+    <input type="submit">
+    </form>
+   
+    
+</div>
+{%endblock%}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{%block head%}<title>Disease Detection</title> {%endblock%}
+
+{%block body%}
+<div class="container">
+<h1>Beginner!!</h1>  
+    <form action="{{url_for('check')}}" method="POST">
+        Email<input type="email" name="email" >
+        Password<input type="password" name="pass">
+        <input type="submit" value="practice">
+    </form>
+</div>
+{%endblock%}
